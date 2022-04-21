@@ -14,10 +14,10 @@
         <div class="header__content-block">
             <div class="auth-buttons">
                 <form>
-                    <button class="auth-buttons__button" onclick="openLogin()"><span class="auth-button-span">Sign in</span></button>
+                    <button type="button" class="auth-buttons__button" onclick="openForm('LoginForm')"><span class="auth-button-span">Sign in</span></button>
                 </form>
                 <form>
-                    <a class="auth-buttons__button" href="/"><span class="auth-button-span">Sign up</span></a>
+                    <button type="button" class="auth-buttons__button" onclick="openForm('SignUpForm')"><span class="auth-button-span">Sign up</span></button>
                 </form>
             </div>
             <div class="header__sitename">crystal cave</div>
@@ -188,22 +188,22 @@
             </div>
                 <ul class="navigation-panel-genres">
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
                     </li>
                 </ul>
                 <div class="nav-button">
@@ -218,22 +218,64 @@
             <a href="http://vk.com" class="footer__link">vk</a>
         </div>
     </footer>
-    <div class="login-form" id="LoginForm">
-        <p>asdasd</p>
-    </div>
+
     <div class="player" id="player">
         <audio controls style="width:100%;max-width:600px;">
             <source src="../HTML, CSS/test.mp3" type="audio/mp3">
             Тег audio не поддерживается вашим браузером.
         </audio>
     </div>
+    <div class="login-form" id="LoginForm">
+        <form class="login-bottom">
+            <span class="login-main-text">sign in</span>
+            <input type="text" placeholder="Enter Username" name="username" class="login-bottom__username-input" required>
+            <input type="password" placeholder="Enter Password" name="psw" class="login-bottom__password-input" required>
+            <button type="submit" class="login-bottom__continue-button login-bottom__continue-button_standard" onclick="closeFrom('LoginForm')">Continue</button>
+        </form>
+    </div>
+
+    <div class="login-form" id="SignUpForm">
+        <form class="login-bottom">
+            <span class="login-main-text">sign up</span>
+            <input type="text" placeholder="Enter Username" name="username" class="login-bottom__username-input" required>
+            <input type="password" placeholder="Enter Password" name="psw" class="login-bottom__password-input" required>
+            <button type="submit" class="login-bottom__continue-button login-bottom__continue-button_standard" onclick="closeFrom('SignUpForm')">Continue</button>
+        </form>
+    </div>
     
         <script>
-        function openLogin() {
-        document.getElementById("LoginForm").style.display = "block";
+        {
+            var currentForm=null;
+            var isOpen = false;
+            var canClose = false;
         }
-        function closeLogin() {
-        document.getElementById("LoginForm").style.display = "none";
+        function openForm(formName) {
+            closeCurrentForm()
+            document.getElementById(formName).style.display = "flex";
+            currentForm = formName;
+            isOpen = true;
+        }
+        function closeFrom(formName) {
+            document.getElementById(formName).style.display = "none";
+            currentForm = null;
+            isOpen = false
+            canClose = false
+        } 
+        function closeCurrentForm()
+        {
+            if (isOpen)
+            {
+                if(canClose)
+                {
+                    document.getElementById(currentForm).style.display = "none";
+                    isOpen = false;
+                    canClose =false;
+                }
+                else
+                {
+                    canClose = true;
+                }
+            }
         }
         </script>
 </body>

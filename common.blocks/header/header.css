@@ -44,6 +44,7 @@
     font-size: 1.4em;
     padding: 4px;
     position: relative;
+    border-width: 0ch;
     text-decoration: none;
     width: 7em;
     z-index: 2;

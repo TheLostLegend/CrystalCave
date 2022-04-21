@@ -1,21 +1,13 @@
 .login-form{
     display: none;
-    width: 400px;
+    width: 100%;
     height: 400px;
     position: absolute;
     align-items: center;
     flex-direction: column;
     top: 375px;
-    left: 320px;
-}
-
-.sign-up-form{
-    display: none;
-    width: 400px;
-    height: 400px;
-    position: absolute;
-    top: 275px;
-    left: 320px;
+    left: 0px;
+    z-index: 1;
 }
 
 .login-bottom{
@@ -72,8 +64,5 @@
 
 .player{
     display: none; 
-    position: absolute;
     width: 100%;
-    top: 89%;
-    left: 0px;
 }
