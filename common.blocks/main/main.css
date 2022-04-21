@@ -1,0 +1,41 @@
+@import url("../fonts.css");
+@import url("../../common.blocks/articles/articles.css");
+@import url("../../common.blocks/button/button.css");
+@import url("../../common.blocks/carousel/carousel.css");
+@import url("../../common.blocks/footer/footer.css");
+@import url("../../common.blocks/form/form.css");
+@import url("../../common.blocks/header/header.css");
+@import url("../../common.blocks/heading/heading.css");
+@import url("../../common.blocks/icon/icon.css");
+@import url("../../common.blocks/info-panel/info-panel.css");
+@import url("../../common.blocks/input/input.css");
+@import url("../../common.blocks/items-panel/items-panel.css");
+@import url("../../common.blocks/link/link.css");
+@import url("../../common.blocks/navbar/navbar.css");
+@import url("../../common.blocks/navlinks/navlinks.css");
+@import url("../../common.blocks/paragraph/paragraph.css");
+@import url("../../common.blocks/round-panel/round-panel.css");
+@import url("../../common.blocks/subscription-panel/subscription-panel.css");
+@import url("../../reset.css");
+@import url("../navigation-panel/navigation-panel.css");
+@import url("../navigation-panel/navigation-panel-genres/navigation-panel-genres.css");
+@import url("../navigation-panel/navigation-panel-head/navigation-panel-head.css");
+@import url("../cave/cave.css");
+@import url("../pop-ups/login.css");
+
+.main {
+   display: flex;
+   flex-grow: 1;
+}
+
+.main__content-block {
+    padding: 80px 0 60px 0;
+    background-color: inherit;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1170px;
+}
+
+.main__subscription-panel {
+    margin: 80px 0;
+}
