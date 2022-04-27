@@ -1,6 +1,7 @@
 .login-form{
     display: none;
     width: 100%;
+    min-width: 280px;
     height: 400px;
     position: absolute;
     align-items: center;
@@ -16,14 +17,15 @@
     flex-direction: column;
     height: 250px;
     min-height: 250px;
-    width: 400px;
+    width: 100%;
+    min-width: 280px;
     background-color: #2b3436;
     align-items: center;
 }
 
 .login-bottom__username-input{
     height: 30px;
-    width: 300px;
+    width: 250px;
     border-width: 0;
     padding: 0%;
     margin-top: 20px;
@@ -31,7 +33,7 @@
 
 .login-bottom__password-input{
     height: 30px;
-    width: 300px;
+    width: 250px;
     border-width: 0;
     padding: 0%;
     margin-top: 20px;
