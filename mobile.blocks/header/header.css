@@ -1,6 +1,6 @@
 .header {
     background-color: #202628;
-    width: 100%;
+    min-width: 280px;
 }
 
 .header__content-block {
@@ -21,7 +21,7 @@
 .header__sitename-mobile {
   display: block;
   font-family: GsEnochian, sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   color: #e7e7e7;
   /*text-transform: uppercase;*/
 }
@@ -37,7 +37,7 @@
 .auth-buttons__button {
     background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
     border-radius: 40px;
-    margin-right: 20px;
+    margin-right: 10px;
     box-sizing: border-box;
     color: #00a84f;
     display: block;
@@ -47,7 +47,7 @@
     border-width: 0ch;
     position: relative;
     text-decoration: none;
-    width: 7em;
+    width: 100px;
     z-index: 2;
   }
   
@@ -64,4 +64,15 @@
   
   .auth-buttons__button:hover .auth-button-span {
     background: transparent;
+  }
+
+  
+  .menu-buttons__button{
+    background-color: inherit;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
   }

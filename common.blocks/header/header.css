@@ -18,7 +18,7 @@
 }
 
 .header__sitename-mobile {
-  display: none;
+  display: block;
   font-family: GsEnochian, sans-serif;
   font-size: 50px;
   color: #e7e7e7;
@@ -63,4 +63,14 @@
   
   .auth-buttons__button:hover .auth-button-span {
     background: transparent;
+  }
+
+  .menu-buttons__button{
+    display: none;
+    background-color: inherit;
+    border: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
   }

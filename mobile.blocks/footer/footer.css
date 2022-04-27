@@ -1,5 +1,6 @@
 .footer {
     background-color: #202628;
+    min-width: 280px;
     width: 100%;
 }
 
@@ -11,9 +12,9 @@
 
 .footer__link {
     text-decoration: none;
-    margin-right: 20px;
+    margin-right: 8px;
     font-family: GsEnochian, sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     color: #e7e7e7;
 }
 
