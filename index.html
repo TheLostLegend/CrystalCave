@@ -5,9 +5,9 @@
     <title>Crystal Cave</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <link rel="stylesheet" href="common.blocks/main/main.css" media="screen and (min-width: 1082px)">
-    <link rel="stylesheet" href="mobile.blocks/main/main.css" media="screen and (max-width: 1082px)">
+    <link rel="stylesheet" href="mobile.blocks/main/main.css" media="screen and (max-width: 1082px) and (orientation: landscape)">
+    <link rel="stylesheet" href="mobile.blocks2/main/main.css" media="screen and (max-width: 1082px) and (orientation: portrait)">
 </head>
 
 <body>
@@ -247,9 +247,9 @@
     
         <script>
         {
-            var currentForm=null;
-            var isOpen = false;
-            var canClose = false;
+            currentForm=null;
+            isOpen = false;
+            canClose = false;
         }
         function openForm(formName) {
             closeCurrentForm()

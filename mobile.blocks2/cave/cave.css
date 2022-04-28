@@ -1,7 +1,7 @@
 .cave{
     background-image: url("../../static/ANIME-PICTURES.NET_-_534492-1780x1250-sakanamodoki-highres-sunlight-reflection-no+people-sunbeam.jpg");
     width: 100%;
-	min-width: 800px;
+	min-width: 280px;
 	z-index: 0;
 }
 
@@ -60,12 +60,12 @@
 }
 
 .buttons {
-	display: inline-block;
+	display: none;
 	width: 100%;
 }
 
 .buttons-mobile {
-	display: none;
+	display: inline-block;
 	min-height: 200px;
 	width: 100%;
 	height: 100%;

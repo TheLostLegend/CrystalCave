@@ -1,15 +1,16 @@
 .navigation-panel{
     display: none;
-    overflow-y: auto;
     position: absolute;
     top: 70px;
     right: 0px;
-    bottom: 42px;
+    left: auto;
+    bottom: 0px;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
     width: 100%;
     max-width: 240px;
-    min-height: 280px;
+    max-height: 840px;
+    min-height: 840px;
     margin: 0;
 }
 
@@ -43,3 +44,5 @@
 .big-button:hover{
     background: #2b2a2a;
 }
+
+

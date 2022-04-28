@@ -1,0 +1,32 @@
+.navigation-panel-genres{
+    min-width: 235px;
+    flex-grow: 1;
+    background-color: #2b3436;
+    list-style : inside;
+    margin: 0;
+    padding-left: 5px;
+}
+
+.navigation-panel-genres li{
+    color: #e7e7e7;
+    list-style-type: none;
+}
+
+.navigation-panel-genres__item{
+    margin-left: 5px;
+}
+
+.navigation-panel-genres__item_font{
+    font-family: GsEnochian;
+    font-size: 18px;
+    color: #e7e7e7;
+    text-decoration: none;
+    background: none; 
+    border: 0ch; 
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.navigation-panel-genres__item:hover{
+    color: #aaa9a9;
+}
