@@ -18,3 +18,7 @@
     border: 0ch; 
     cursor: pointer;
 }
+
+.navigation-panel-head__text_button:hover{
+    color: #aaa9a9;
+}

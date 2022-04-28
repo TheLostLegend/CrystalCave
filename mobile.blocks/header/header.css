@@ -76,3 +76,7 @@
     display: inline-block;
     cursor: pointer;
   }
+
+  .header__sitename-mobile:hover{
+    color: #aaa9a9;
+  }
