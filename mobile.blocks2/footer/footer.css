@@ -1,0 +1,29 @@
+.footer {
+    background-color: #202628;
+    min-width: 280px;
+    width: 100%;
+}
+
+.footer__content-block {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+.footer__link {
+    text-decoration: none;
+    margin-right: 8px;
+    font-family: GsEnochian, sans-serif;
+    font-size: 20px;
+    color: #e7e7e7;
+}
+
+.footer__link:last-of-type {
+    margin-right: 0;
+}
+
+.footer__link:hover{
+    color: #aaa9a9;
+}
+
+

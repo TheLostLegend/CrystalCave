@@ -1,0 +1,93 @@
+.cave{
+    background-image: url("../../static/ANIME-PICTURES.NET_-_534492-1780x1250-sakanamodoki-highres-sunlight-reflection-no+people-sunbeam.jpg");
+    width: 100%;
+	min-width: 280px;
+	z-index: 0;
+}
+
+.button {
+	padding: 2px 2px;
+	margin: 4px;
+	width: 62px;
+	height: 62px;
+	font-size: 35px;
+}
+
+.button_color-cheme, .sound-pack-button_color-cheme{
+	background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+    color: #00a84f;
+    position: relative;
+    text-decoration: none;
+    z-index: 2;
+	align-content: flex-start;
+	text-align: center;
+	border: solid 1px black;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: background-color 75ms ease-out
+}
+
+.button-row {
+	display: flex;
+}
+
+.button-span{
+    align-items: center;
+    background: #0e0e10;
+    display: flex;
+	border-radius: 5px;
+    justify-content: center;
+    height: 100%;
+    transition: 0.5s ease;
+    width: 100%;
+}
+
+.button-span_text-rotation{
+	transform: rotate(90deg);
+}
+
+.button:hover .button-span{
+    background: transparent;
+}
+
+.sound-pack-button:hover .button-span{
+    background: transparent;
+}
+
+.pressed {
+	transition: background-color 75ms ease-out;
+	background-color: #ffa000
+}
+
+.buttons {
+	display: none;
+	width: 100%;
+}
+
+.buttons-mobile {
+	display: inline-block;
+	min-height: 200px;
+	width: 100%;
+	height: 100%;
+}
+
+.sound-pack-button {
+	display: inline-block;
+	padding: 1px 1px;
+	width: 28px;
+	height: 28px;
+	font-size: 20px;
+}
+
+.sound-pack-buttons{
+    display: inline-grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	gap:2px;
+	place-items: center;
+	margin: 4px;
+	width: 62px;
+	height: 62px;
+	border-radius: 6px;
+	transition: background-color 75ms ease-out
+}

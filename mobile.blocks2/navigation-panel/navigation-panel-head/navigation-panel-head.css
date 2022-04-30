@@ -1,0 +1,24 @@
+.navigation-panel-head{
+    display: grid;
+    align-items: center;
+    background-color: #2b3436;
+    min-width: 240px;
+    min-height: 60px;
+}
+
+.navigation-panel-head__text{
+    margin-top: 20px;
+    font-family: GsEnochian;
+    font-size: 24px;
+    color: #e7e7e7;
+}
+
+.navigation-panel-head__text_button{
+    background: none; 
+    border: 0ch; 
+    cursor: pointer;
+}
+
+.navigation-panel-head__text_button:hover{
+    color: #aaa9a9;
+}

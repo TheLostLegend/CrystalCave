@@ -10,3 +10,7 @@
 - Прослушивание идеальной игры трека
 
 https://www.figma.com/file/EMh4KE9cDJtLPx9bUseVBi/Lab2_1-(1)?node-id=1%3A2
+
+### Ссылка на сайт:
+
+https://thelostlegend.github.io/CrystalCave/
