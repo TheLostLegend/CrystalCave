@@ -44,9 +44,23 @@
     background: transparent;
 }
 
+.button:focus{
+	outline: none;
+}
+
+.sound-pack-button:focus{
+	outline: none;
+}
+
 .sound-pack-button:hover .button-span{
     background: transparent;
 }
+
+.button-test .button-span{
+    background: transparent;
+}
+
+
 
 .pressed {
 	transition: background-color 75ms ease-out;
