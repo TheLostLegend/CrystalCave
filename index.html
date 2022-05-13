@@ -4,6 +4,7 @@
 <head>
     <title>Crystal Cave</title>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="common.blocks/main/main.css" media="screen and (min-width: 1082px)">
     <link rel="stylesheet" href="mobile.blocks/main/main.css" media="screen and (max-width: 1082px) and (orientation: landscape)">
@@ -14,12 +15,9 @@
     <header class="header">
         <div class="header__content-block">
             <div class="auth-buttons">
-                <form>
-                    <button type="button" class="auth-buttons__button" onclick="openForm('LoginForm')"><span class="auth-button-span">Sign in</span></button>
-                </form>
-                <form>
-                    <button type="button" class="auth-buttons__button" onclick="openForm('SignUpForm')"><span class="auth-button-span">Sign up</span></button>
-                </form>
+                <button type="button" class="auth-buttons__button" id="btnLogin" onclick="openForm('LoginForm')"><span class="auth-button-span">Sign in</span></button>
+                <button type="button" class="auth-buttons__button" id="btnSignup" onclick="openForm('SignUpForm')"><span class="auth-button-span">Sign up</span></button>
+                <button type="button" class="auth-buttons__button" id="btnLogout" ><span class="auth-button-span">Log out</span></button>
             </div>
             <div class="header__sitename">
                 crystal cave
@@ -30,65 +28,69 @@
         <div class="cave">
             <div class="buttons">
                 <div class="button-row">
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="0"><span class="button-span">1</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="1"><span class="button-span">2</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="2"><span class="button-span">3</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="3"><span class="button-span">4</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="4"><span class="button-span">5</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="5"><span class="button-span">6</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="6"><span class="button-span">7</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="7"><span class="button-span">8</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="8"><span class="button-span">9</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="9"><span class="button-span">0</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="10"><span class="button-span">-</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="11"><span class="button-span">=</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b49" onmousedown="playMp3(49)" ><span class="button-span">1</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b50" onmousedown="playMp3(50)" ><span class="button-span">2</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b51" onmousedown="playMp3(51)" ><span class="button-span">3</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b52" onmousedown="playMp3(52)" ><span class="button-span">4</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b53" onmousedown="playMp3(53)" ><span class="button-span">5</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b54" onmousedown="playMp3(54)" ><span class="button-span">6</span></button>
+
+                   <button class="button button_color-cheme" pressure="false" id="b55" onmousedown="playMp3(55)" ><span class="button-span">7</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b56" onmousedown="playMp3(56)" ><span class="button-span">8</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b57" onmousedown="playMp3(57)" ><span class="button-span">9</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b48" onmousedown="playMp3(48)" ><span class="button-span">0</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b189" onmousedown="playMp3(189)" ><span class="button-span">-</span></button>
+                   <button class="button button_color-cheme" pressure="false" id="b187" onmousedown="playMp3(187)" ><span class="button-span">=</span></button>
                 </div>
                 <div class="button-row">
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="12"><span class="button-span">Q</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="13"><span class="button-span">W</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="14"><span class="button-span">E</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="15"><span class="button-span">R</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="16"><span class="button-span">T</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="17"><span class="button-span">Y</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="18"><span class="button-span">U</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="19"><span class="button-span">I</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="20"><span class="button-span">O</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="21"><span class="button-span">P</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="22"><span class="button-span">[</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="23"><span class="button-span">]</span></button>
-                </div>
-                <div class="button-row">
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="24"><span class="button-span">A</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="25"><span class="button-span">S</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="26"><span class="button-span">D</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="27"><span class="button-span">F</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="28"><span class="button-span">G</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="29"><span class="button-span">H</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="30"><span class="button-span">J</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="31"><span class="button-span">K</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="32"><span class="button-span">L</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="33"><span class="button-span">;</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="34"><span class="button-span">'</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="35"><span class="button-span">\n</span></button>
-                </div>
-                <div class="button-row">
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="36"><span class="button-span">Z</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="37"><span class="button-span">X</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="38"><span class="button-span">C</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="39"><span class="button-span">V</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="40"><span class="button-span">B</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="41"><span class="button-span">N</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="42"><span class="button-span">M</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="43"><span class="button-span">,</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="44"><span class="button-span">.</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="45"><span class="button-span">/</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="46"><span class="button-span">\s</span></button>
-                   <div class="sound-pack-buttons">
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">^</span></button>
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">v</span></button>
+                   <button class="button button_color-cheme" id="b81" pressure="false" onmousedown="playMp3(81)" ><span class="button-span">Q</span></button>
+                   <button class="button button_color-cheme" id="b87" pressure="false" onmousedown="playMp3(87)" ><span class="button-span">W</span></button>
+                   <button class="button button_color-cheme" id="b69" pressure="false" onmousedown="playMp3(69)" ><span class="button-span">E</span></button>
+                   <button class="button button_color-cheme" id="b82" pressure="false" onmousedown="playMp3(82)" ><span class="button-span">R</span></button>
+                   <button class="button button_color-cheme" id="b84" pressure="false" onmousedown="playMp3(84)" ><span class="button-span">T</span></button>
+                   <button class="button button_color-cheme" id="b89" pressure="false" onmousedown="playMp3(89)" ><span class="button-span">Y</span></button>
                    
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">&lt;</span></button>
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">&gt;</span></button>
+                   <button class="button button_color-cheme" id="b85" pressure="false" onmousedown="playMp3(85)" ><span class="button-span">U</span></button>
+                   <button class="button button_color-cheme" id="b73" pressure="false" onmousedown="playMp3(73)" ><span class="button-span">I</span></button>
+                   <button class="button button_color-cheme" id="b79" pressure="false" onmousedown="playMp3(79)" ><span class="button-span">O</span></button>
+                   <button class="button button_color-cheme" id="b80" pressure="false" onmousedown="playMp3(80)" ><span class="button-span">P</span></button>
+                   <button class="button button_color-cheme" id="b219" pressure="false" onmousedown="playMp3(219)" ><span class="button-span">[</span></button>
+                   <button class="button button_color-cheme" id="b221" pressure="false" onmousedown="playMp3(221)" ><span class="button-span">]</span></button>
+                </div>
+                <div class="button-row">
+                   <button class="button button_color-cheme" id="b65" pressure="false" onmousedown="playMp3(65)" ><span class="button-span">A</span></button>
+                   <button class="button button_color-cheme" id="b83" pressure="false" onmousedown="playMp3(83)"><span class="button-span">S</span></button>
+                   <button class="button button_color-cheme" id="b68" pressure="false" onmousedown="playMp3(68)"><span class="button-span">D</span></button>
+                   <button class="button button_color-cheme" id="b70" pressure="false" onmousedown="playMp3(70)"><span class="button-span">F</span></button>
+                   <button class="button button_color-cheme" id="b71" pressure="false" onmousedown="playMp3(71)"><span class="button-span">G</span></button>
+                   <button class="button button_color-cheme" id="b72" pressure="false" onmousedown="playMp3(72)"><span class="button-span">H</span></button>
+
+                   <button class="button button_color-cheme" id="b74" pressure="false" onmousedown="playMp3(74)"><span class="button-span">J</span></button>
+                   <button class="button button_color-cheme" id="b75" pressure="false" onmousedown="playMp3(75)"><span class="button-span">K</span></button>
+                   <button class="button button_color-cheme" id="b76" pressure="false" onmousedown="playMp3(76)"><span class="button-span">L</span></button>
+                   <button class="button button_color-cheme" id="b186" pressure="false" onmousedown="playMp3(186)"><span class="button-span">;</span></button>
+                   <button class="button button_color-cheme" id="b222" pressure="false" onmousedown="playMp3(222)"><span class="button-span">'</span></button>
+                   <button class="button button_color-cheme" id="b13" pressure="false" onmousedown="playMp3(13)"><span class="button-span">\n</span></button>
+                </div>
+                <div class="button-row">
+                   <button class="button button_color-cheme" id="b90" pressure="false" onmousedown="playMp3(90)"><span class="button-span">Z</span></button>
+                   <button class="button button_color-cheme" id="b88" pressure="false" onmousedown="playMp3(88)"><span class="button-span">X</span></button>
+                   <button class="button button_color-cheme" id="b67" pressure="false" onmousedown="playMp3(67)"><span class="button-span">C</span></button>
+                   <button class="button button_color-cheme" id="b86" pressure="false" onmousedown="playMp3(86)"><span class="button-span">V</span></button>
+                   <button class="button button_color-cheme" id="b66" pressure="false" onmousedown="playMp3(66)"><span class="button-span">B</span></button>
+                   <button class="button button_color-cheme" id="b78" pressure="false" onmousedown="playMp3(78)"><span class="button-span">N</span></button>
+
+                   <button class="button button_color-cheme" id="b77" pressure="false" onmousedown="playMp3(77)"><span class="button-span">M</span></button>
+                   <button class="button button_color-cheme" id="b188" pressure="false" onmousedown="playMp3(188)"><span class="button-span">,</span></button>
+                   <button class="button button_color-cheme" id="b190" pressure="false" onmousedown="playMp3(190)"><span class="button-span">.</span></button>
+                   <button class="button button_color-cheme" id="b191" pressure="false" onmousedown="playMp3(191)"><span class="button-span">/</span></button>
+                   <button class="button button_color-cheme" id="b16" pressure="false" onmousedown="playMp3(16)"><span class="button-span">\s</span></button>
+                   <div class="sound-pack-buttons">
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="b38" onclick="changePar(38)"><span class="button-span">^</span></button>
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="b40" onclick="changePar(40)"><span class="button-span">v</span></button>
+                   
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="b37" onclick="changePar(37)"><span class="button-span">&lt;</span></button>
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="b39" onclick="changePar(39)"><span class="button-span">&gt;</span></button>
                    </div>
                 </div>
             </div>
@@ -97,91 +99,90 @@
 
             <div class="buttons-mobile">
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="36"><span class="button-span button-span_text-rotation">Z</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="24"><span class="button-span button-span_text-rotation">A</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="12"><span class="button-span button-span_text-rotation">Q</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="0"><span class="button-span button-span_text-rotation">1</span></button>
+                    <button class="button button_color-cheme" id="bm90" pressure="false" onmousedown="playMp3(90)"><span class="button-span button-span_text-rotation">Z</span></button>
+                    <button class="button button_color-cheme" id="bm65" pressure="false" onmousedown="playMp3(65)" ><span class="button-span button-span_text-rotation">A</span></button>
+                    <button class="button button_color-cheme" id="bm81" pressure="false" onmousedown="playMp3(81)" ><span class="button-span button-span_text-rotation">Q</span></button>
+                    <button class="button button_color-cheme" id="bm49" pressure="false" onmousedown="playMp3(49)" ><span class="button-span button-span_text-rotation">1</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="37"><span class="button-span button-span_text-rotation">X</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="25"><span class="button-span button-span_text-rotation">S</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="13"><span class="button-span button-span_text-rotation">W</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="1"><span class="button-span button-span_text-rotation">2</span></button>
+                    <button class="button button_color-cheme" id="bm88" pressure="false" onmousedown="playMp3(88)"><span class="button-span button-span_text-rotation">X</span></button>
+                    <button class="button button_color-cheme" id="bm83" pressure="false" onmousedown="playMp3(83)"><span class="button-span button-span_text-rotation">S</span></button>
+                    <button class="button button_color-cheme" id="bm87" pressure="false" onmousedown="playMp3(87)" ><span class="button-span button-span_text-rotation">W</span></button>
+                    <button class="button button_color-cheme" id="bm50" pressure="false" onmousedown="playMp3(50)" ><span class="button-span button-span_text-rotation">2</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="38"><span class="button-span button-span_text-rotation">C</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="26"><span class="button-span button-span_text-rotation">D</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="14"><span class="button-span button-span_text-rotation">E</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="2"><span class="button-span button-span_text-rotation">3</span></button>
+                    <button class="button button_color-cheme" id="bm67" pressure="false" onmousedown="playMp3(67)"><span class="button-span button-span_text-rotation">C</span></button>
+                    <button class="button button_color-cheme" id="bm68" pressure="false" onmousedown="playMp3(68)"><span class="button-span button-span_text-rotation">D</span></button>
+                    <button class="button button_color-cheme" id="bm69" pressure="false" onmousedown="playMp3(69)" ><span class="button-span button-span_text-rotation">E</span></button>
+                    <button class="button button_color-cheme" id="bm51" pressure="false" onmousedown="playMp3(51)" ><span class="button-span button-span_text-rotation">3</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="39"><span class="button-span button-span_text-rotation">V</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="27"><span class="button-span button-span_text-rotation">F</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="15"><span class="button-span button-span_text-rotation">R</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="3"><span class="button-span button-span_text-rotation">4</span></button>
+                    <button class="button button_color-cheme" id="bm86" pressure="false" onmousedown="playMp3(86)"><span class="button-span button-span_text-rotation">V</span></button>
+                    <button class="button button_color-cheme" id="bm70" pressure="false" onmousedown="playMp3(70)"><span class="button-span button-span_text-rotation">F</span></button>
+                    <button class="button button_color-cheme" id="bm82" pressure="false" onmousedown="playMp3(82)" ><span class="button-span button-span_text-rotation">R</span></button>
+                    <button class="button button_color-cheme" id="bm52" pressure="false" onmousedown="playMp3(52)" ><span class="button-span button-span_text-rotation">4</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="40"><span class="button-span button-span_text-rotation">B</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="28"><span class="button-span button-span_text-rotation">G</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="16"><span class="button-span button-span_text-rotation">T</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="4"><span class="button-span button-span_text-rotation">5</span></button>
+                    <button class="button button_color-cheme" id="bm66" pressure="false" onmousedown="playMp3(66)"><span class="button-span button-span_text-rotation">B</span></button>
+                    <button class="button button_color-cheme" id="bm71" pressure="false" onmousedown="playMp3(71)"><span class="button-span button-span_text-rotation">G</span></button>
+                    <button class="button button_color-cheme" id="bm84" pressure="false" onmousedown="playMp3(84)" ><span class="button-span button-span_text-rotation">T</span></button>
+                    <button class="button button_color-cheme" id="bm53" pressure="false" onmousedown="playMp3(53)" ><span class="button-span button-span_text-rotation">5</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="41"><span class="button-span button-span_text-rotation">N</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="29"><span class="button-span button-span_text-rotation">H</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="17"><span class="button-span button-span_text-rotation">Y</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="5"><span class="button-span button-span_text-rotation">6</span></button>
+                    <button class="button button_color-cheme" id="bm78" pressure="false" onmousedown="playMp3(78)"><span class="button-span button-span_text-rotation">N</span></button>
+                    <button class="button button_color-cheme" id="bm72" pressure="false" onmousedown="playMp3(72)"><span class="button-span button-span_text-rotation">H</span></button>
+                    <button class="button button_color-cheme" id="bm89" pressure="false" onmousedown="playMp3(89)" ><span class="button-span button-span_text-rotation">Y</span></button>
+                    <button class="button button_color-cheme" id="bm54" pressure="false" onmousedown="playMp3(54)" ><span class="button-span button-span_text-rotation">6</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="42"><span class="button-span button-span_text-rotation">M</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="30"><span class="button-span button-span_text-rotation">J</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="18"><span class="button-span button-span_text-rotation">U</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="6"><span class="button-span button-span_text-rotation">7</span></button>
+                    <button class="button button_color-cheme" id="bm77" pressure="false" onmousedown="playMp3(77)"><span class="button-span button-span_text-rotation">M</span></button>
+                    <button class="button button_color-cheme" id="bm74" pressure="false" onmousedown="playMp3(74)"><span class="button-span button-span_text-rotation">J</span></button>
+                    <button class="button button_color-cheme" id="bm85" pressure="false" onmousedown="playMp3(85)" ><span class="button-span button-span_text-rotation">U</span></button>
+                    <button class="button button_color-cheme" id="bm55" pressure="false" onmousedown="playMp3(55)" ><span class="button-span button-span_text-rotation">7</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="43"><span class="button-span button-span_text-rotation">,</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="31"><span class="button-span button-span_text-rotation">K</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="19"><span class="button-span button-span_text-rotation">I</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="7"><span class="button-span button-span_text-rotation">8</span></button>
+                    <button class="button button_color-cheme" id="bm188" pressure="false" onmousedown="playMp3(188)"><span class="button-span button-span_text-rotation">,</span></button>
+                    <button class="button button_color-cheme" id="bm75" pressure="false" onmousedown="playMp3(75)"><span class="button-span button-span_text-rotation">K</span></button>
+                    <button class="button button_color-cheme" id="bm73" pressure="false" onmousedown="playMp3(73)" ><span class="button-span button-span_text-rotation">I</span></button>
+                    <button class="button button_color-cheme" id="bm56" pressure="false" onmousedown="playMp3(56)" ><span class="button-span button-span_text-rotation">8</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="44"><span class="button-span button-span_text-rotation">.</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="32"><span class="button-span button-span_text-rotation">L</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="20"><span class="button-span button-span_text-rotation">O</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="8"><span class="button-span button-span_text-rotation">9</span></button>
+                    <button class="button button_color-cheme" id="bm190" pressure="false" onmousedown="playMp3(190)"><span class="button-span button-span_text-rotation">.</span></button>
+                    <button class="button button_color-cheme" id="bm76" pressure="false" onmousedown="playMp3(76)"><span class="button-span button-span_text-rotation">L</span></button>
+                    <button class="button button_color-cheme" id="bm79" pressure="false" onmousedown="playMp3(79)" ><span class="button-span button-span_text-rotation">O</span></button>
+                    <button class="button button_color-cheme" id="bm57" pressure="false" onmousedown="playMp3(57)" ><span class="button-span button-span_text-rotation">9</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="45"><span class="button-span button-span_text-rotation">/</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="33"><span class="button-span button-span_text-rotation">;</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="21"><span class="button-span button-span_text-rotation">P</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="9"><span class="button-span button-span_text-rotation">0</span></button>
+                    <button class="button button_color-cheme" id="bm191" pressure="false" onmousedown="playMp3(191)"><span class="button-span button-span_text-rotation">/</span></button>
+                    <button class="button button_color-cheme" id="bm186" pressure="false" onmousedown="playMp3(186)"><span class="button-span button-span_text-rotation">;</span></button>
+                    <button class="button button_color-cheme" id="bm80" pressure="false" onmousedown="playMp3(80)" ><span class="button-span button-span_text-rotation">P</span></button>
+                    <button class="button button_color-cheme" id="bm48" pressure="false" onmousedown="playMp3(48)" ><span class="button-span button-span_text-rotation">0</span></button>
                 </div>
                 <div class="button-row">
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="46"><span class="button-span button-span_text-rotation">\s</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="34"><span class="button-span button-span_text-rotation">'</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="22"><span class="button-span button-span_text-rotation">[</span></button>
-                    <button class="button button_color-cheme" pressure="false" released="true" buttonnum="10"><span class="button-span button-span_text-rotation">-</span></button>
+                    <button class="button button_color-cheme" id="bm16" pressure="false" onmousedown="playMp3(16)"><span class="button-span button-span_text-rotation">\s</span></button>
+                    <button class="button button_color-cheme" id="bm222" pressure="false" onmousedown="playMp3(222)"><span class="button-span button-span_text-rotation">'</span></button>
+                    <button class="button button_color-cheme" id="bm219" pressure="false" onmousedown="playMp3(219)" ><span class="button-span button-span_text-rotation">[</span></button>
+                    <button class="button button_color-cheme" id="bm189" pressure="false" onmousedown="playMp3(189)" ><span class="button-span button-span_text-rotation">-</span></button>
                 </div>
 
 
                 <div class="button-row">
                     <div class="sound-pack-buttons">
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">^</span></button>
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">&gt;</span></button>
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="bm37" onclick="changePar(37)"><span class="button-span">^</span></button>
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="bm38" onclick="changePar(38)"><span class="button-span">&gt;</span></button>
                    
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">v</span></button>
-                        <button class="sound-pack-button sound-pack-button_color-cheme"><span class="button-span">&lt;</span></button>
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="bm39" onclick="changePar(39)"><span class="button-span">v</span></button>
+                        <button class="sound-pack-button sound-pack-button_color-cheme" id="bm40" onclick="changePar(40)"><span class="button-span">&lt;</span></button>
                    </div>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="35"><span class="button-span button-span_text-rotation">\n</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="23"><span class="button-span button-span_text-rotation">]</span></button>
-                   <button class="button button_color-cheme" pressure="false" released="true" buttonnum="11"><span class="button-span button-span_text-rotation">=</span></button>
+                   <button class="button button_color-cheme" id="bm13" pressure="false" onmousedown="playMp3(13)"><span class="button-span button-span_text-rotation">\n</span></button>
+                   <button class="button button_color-cheme" id="bm221" pressure="false" onmousedown="playMp3(221)" ><span class="button-span button-span_text-rotation">]</span></button>
+                   <button class="button button_color-cheme" id="bm187" pressure="false" onmousedown="playMp3(187)" ><span class="button-span button-span_text-rotation">=</span></button>
                 </div>
             </div>
         </div>
         <div class="navigation-panel" id = "NavPan">
-
             <div class="navigation-panel-head" >
-                <button class="navigation-panel-head__text navigation-panel-head__text_button">
+                <button class="navigation-panel-head__text navigation-panel-head__text_button" id="newSng" onclick="nowWeRecord()">
                     new song
                 </button>
                 <h1 class="navigation-panel-head__text">
@@ -190,26 +191,26 @@
             </div>
                 <ul class="navigation-panel-genres">
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="playRecord(0)" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="playRecord(1)" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="playRecord(2)" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="playRecord(3)" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="playRecord(4)" href="#">my song</button>
                     </li>
                     <li>
-                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="openForm('player')" href="#">my song</button>
+                        <button class="navigation-panel-genres__item navigation-panel-genres__item_font"  onclick="playRecord(5)" href="#">my song</button>
                     </li>
                 </ul>
                 <div class="nav-button">
-                <button class="big-button"> &gt;</button>
+                <button class="big-button" onclick="exampleF()"> &gt;</button>
                 </div>
         </div>
     </main>
@@ -220,66 +221,29 @@
             <a href="http://vk.com" class="footer__link">vk</a>
         </div>
     </footer>
-
-    <div class="player" id="player">
-        <audio controls style="width:100%;max-width:600px;">
-            <source src="../HTML, CSS/test.mp3" type="audio/mp3">
-            Тег audio не поддерживается вашим браузером.
-        </audio>
-    </div>
     <div class="login-form" id="LoginForm">
-        <form class="login-bottom">
+        <div class="login-bottom">
             <span class="login-main-text">sign in</span>
-            <input type="text" placeholder="Enter Username" name="username" class="login-bottom__username-input" required>
-            <input type="password" placeholder="Enter Password" name="psw" class="login-bottom__password-input" required>
-            <button type="submit" class="login-bottom__continue-button login-bottom__continue-button_standard" onclick="closeFrom('LoginForm')">Continue</button>
-        </form>
+            <input type="text" id="loginUsername" placeholder="Enter Username" name="username" class="login-bottom__username-input" required>
+            <input type="password" id="loginPassword" placeholder="Enter Password" name="psw" class="login-bottom__password-input" required>
+            <button id="btnLoginForm" class="login-bottom__continue-button login-bottom__continue-button_standard" onclick="closeFrom('LoginForm')">Continue</button>
+        </div>
     </div>
 
     <div class="login-form" id="SignUpForm">
-        <form class="login-bottom">
+        <div class="login-bottom">
             <span class="login-main-text">sign up</span>
-            <input type="text" placeholder="Enter Username" name="username" class="login-bottom__username-input" required>
-            <input type="password" placeholder="Enter Password" name="psw" class="login-bottom__password-input" required>
-            <button type="submit" class="login-bottom__continue-button login-bottom__continue-button_standard" onclick="closeFrom('SignUpForm')">Continue</button>
-        </form>
+            <input type="text" id="sigupUsername" placeholder="Enter Username" name="username" class="login-bottom__username-input" required>
+            <input type="password" id="sigupPassword" placeholder="Enter Password" name="psw" class="login-bottom__password-input" required>
+            <button id="btnSignupForm" class="login-bottom__continue-button login-bottom__continue-button_standard" onclick="closeFrom('SignUpForm')">Continue</button>
+        </div>
     </div>
     
-        <script>
-        {
-            currentForm=null;
-            isOpen = false;
-            canClose = false;
-        }
-        function openForm(formName) {
-            closeCurrentForm()
-            document.getElementById(formName).style.display = "flex";
-            currentForm = formName;
-            isOpen = true;
-        }
-        function closeFrom(formName) {
-            document.getElementById(formName).style.display = "none";
-            currentForm = null;
-            isOpen = false
-            canClose = false
-        } 
-        function closeCurrentForm()
-        {
-            if (isOpen)
-            {
-                if(canClose)
-                {
-                    document.getElementById(currentForm).style.display = "none";
-                    isOpen = false;
-                    canClose =false;
-                }
-                else
-                {
-                    canClose = true;
-                }
-            }
-        }
-        </script>
+    <script type="module" src="src/index.js"></script>
+    <script src="src/keyboard.js"></script>
+    <script type="module" src="src/ui.js"></script>
+    <script type="module" src="src/auth.js"></script>
+        
 </body>
 
 </html>
